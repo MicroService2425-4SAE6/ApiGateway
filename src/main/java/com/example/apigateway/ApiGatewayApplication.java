@@ -21,7 +21,8 @@ public class ApiGatewayApplication {
                 .routes()
                 .route("candidat",r->r.path("/candidats/**")
                         .uri("lb://CandidatSAE6") )
-
+                .route("job",r->r.path("/jobs/**")
+                        .uri("lb://JobSAE6") )
                 .build();
     }
 
